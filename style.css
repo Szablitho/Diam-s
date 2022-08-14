@@ -1,18 +1,27 @@
 * {
     margin: 0 0;
     padding: 0 0;
+    box-sizing:border-box;
+    /* Elements border is counted within total set dimensions and adjusting content */
+    /* -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    uncomment if buttons resize onmouse over */
 }
 body {
     color: white;
     margin: 0 auto;
-    width: 90%;
+    width: 92%;
     height: auto;
-    background: url("https://lastfm.freetls.fastly.net/i/u/770x0/61a0076b85584f7d956787ad16ac9a5a.jpg") rgba(0, 0, 221, 0.225) fixed;
+ 
+    background: url("artfichier_776967_6306439_201610112801793_high conrast.jpg") fixed;
     background-size: cover;
+    background-color: rgba(0, 0, 0, 0.9);
+   
 }
 
 header h1 {
-    background: linear-gradient(90deg,rgb(63, 6, 6) 90%,rgba(255, 0, 0, 0.575));
+    width: 100%;
+    background: linear-gradient(90deg,hsl(44, 70%, 35%) 80%,hsl(44, 70%, 70%));
     font-size: 3.5em;
     color: whitesmoke;
     text-align:center;
@@ -22,35 +31,65 @@ main {
     position: relative;
     top: 20px;
     background-color: black;
+    width: 100%;
    /* background: linear-gradient(90deg,rgb(6, 6, 6),rgba(255, 0, 0)); */
     
 
 }
 section {
+    position: relative;
+    top: 50px;
     width: 90%;
     float:left;
 }
+section[title='Introduction'] {
+    position: relative;
+    bottom: 100px;
+    top: 0;
+}
+
 nav {
+    background: linear-gradient(90deg,hsl(44, 70%, 35%) 0%,hsl(44, 70%, 70%));
     color:white;
     position: fixed;
-    right: 5%;
+    right: 4%;
     z-index: 10;
     float: right;
-    width: 100px;
+    width: auto;
     height: 300px;
-    background-color: black;
     border-radius: 5px;
 }
 nav ul{
-    background-color:rgba(0, 0, 0, 0.575);
     text-decoration: none;
     list-style-type: none;
+    list-style-position: inside;
+    text-align: left;
 }
 nav ul li {
+    border: 3px outset white;
+    margin: 10px auto 3px;
+    padding: 5px 2px;
     width: 100%;
-    margin: 0 auto 5px;
-    text-align: center;
+    font-size: 1.5em;
+} /* trying to put images on options in list, but they are too big. */
+/* nav ul li:first-child {
+    list-style-image: url(button_home.png); 
+} */ 
+
+/* here and in html is solution for list images */
+nav ul li img {
+    height: 22px;
 }
+nav ul li:hover {
+    border: 3px outset rgba(255, 247, 223, 0.653);
+}
+nav ul li:active {
+    border: 3px inset rgba(255, 247, 223, 0.653);
+    box-shadow: inset 2px 2px 5px rgb(3 3 3);
+}
+/* https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate3 
+buttons pressing effect to apply
+try also border-style: inset;*/
 article {
     position:relative;
     width: 90%;
@@ -74,13 +113,24 @@ article {
 
 q {
     display:block;
-    /* position:absolute; */
-    top: 40%;
-    right: 70%;
     text-align: center;
     margin: 5px auto;
     font-style: italic;
-    color: rgba(198, 198, 198, 0.907);
-    text-justify: distribute-all-lines;
+    color: rgba(200, 200, 198);
+    filter: contrast(200%);
+
+}
+.quoteDate {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+}
+section h2 {
+    position: relative;
+    left: 15px;
 }
 .clear {clear:both;}
+footer {
+    font-size: 12px;
+    clear:both;
+}
