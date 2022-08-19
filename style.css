@@ -71,14 +71,15 @@ nav ul li {
     padding: 5px 2px;
     width: 100%;
     font-size: 1.5em;
-} /* trying to put images on options in list, but they are too big. */
-/* nav ul li:first-child {
-    list-style-image: url(button_home.png); 
-} */ 
+} 
+nav ul li img {
+    margin: 0 5px 0px;
+}
 
 /* here and in html is solution for list images */
 nav ul li img {
     height: 22px;
+    margin: 3px 5px 0;
 }
 nav ul li:hover {
     border: 3px outset rgba(255, 247, 223, 0.653);
