@@ -81,9 +81,11 @@ nav ul li img {
     height: 22px;
     margin: 3px 5px 0;
 }
+/* that is effect of 3D button sticking out */
 nav ul li:hover {
     border: 3px outset rgba(255, 247, 223, 0.653);
 }
+/* and this is pressed button effect */
 nav ul li:active {
     border: 3px inset rgba(255, 247, 223, 0.653);
     box-shadow: inset 2px 2px 5px rgb(3 3 3);
@@ -94,8 +96,9 @@ try also border-style: inset;*/
 article {
     position:relative;
     width: 90%;
-    margin: 0 auto;
-    border: 2px solid black;
+    /* bottom margin fixes gap between article and footer */
+    margin: 10px auto 99px auto;
+    border: 2px solid hsl(44, 70%, 70%);
     border-radius: 4px;
 }
 .iframe-container {
